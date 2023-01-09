@@ -130,7 +130,7 @@ print(global1)
 #-----------------------------------------------------------------------
 
 
-#python numbers - int float complex
+#numbers - int float complex
 
 #case 1 - complex number
 comp = 0+0j
@@ -154,6 +154,105 @@ print(int(1.001))
 import random
 print(random.randrange(1,10))
 #-----------------------------------------------------------------------
+
+
+#casting - int(), float(), str() - primitive object constructor
+
+x = int(1)
+y = float(1)
+z = str(1)
+print(x,y,z)
+#-----------------------------------------------------------------------
+
+
+#string
+
+#case 1 - multiline string
+multline1 = """line 1
+line 2
+line 3"""
+print(multline1)
+multline2 = '''line 4
+line 5
+line 6'''
+print(multline2)
+
+#case 2 - slicing string
+alphabets = "abcdefghijklmnopqrstuvwxyz"
+print(alphabets[0:5])
+print(alphabets[:5])
+print(alphabets[5:])
+print(alphabets[-3:-2])
+print(alphabets[-3:])
+print(alphabets[:-3])
+
+#case 3 - string methods
+alphabetsl = "abcdefghijklmnopqrstuvwxyz"
+print(alphabetsl.upper())
+alphabetsu = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+print(alphabetsu.lower())
+trim = "  abc  "
+print(trim.strip())
+name = "chotu"
+print(name.replace("tu","2"))
+greet = "Hello"
+print(greet + " " + name)
+
+#case 4 - string format as number type and string cannot be concatenated
+one = 1
+two = 2
+three = 3
+number = "one {} two {} three{}"	
+print(number.format(one,two,three))
+numberindex = "one {2} two {1} three{0}"
+print(numberindex.format(three,two,one))	
+
+#case 5 - escape chars \" \' \\ \n \r \t \b \f \ooo \xhh
+quote = "He said \"\Hello!\\\" to me"
+print(quote)
+#-----------------------------------------------------------------------
+
+
+#boolean
+
+
+print(0==0)
+print(bool(1))
+print(bool(0))
+print(bool("."))
+print(bool(""))
+#-----------------------------------------------------------------------
+
+
+#operators
+
+# case 1 - arithmetic + - * / % ** //
+print(2**5)  # 2 power 5
+print(11//2) # 11 div 5 as whole no
+
+#case 2 - assignment = += -= *= /= %= //= **= &= |= ^= >>= <<=
+#case 3 - comparison == != > < >= <=
+#case 4 - logical and or not
+
+#case 5 - identity is is not
+mem1 = 0
+mem2 = mem1
+print(mem1 is mem2)
+
+#case 6 - membership in not in
+letter = {'a','b','c'}
+print('a' in letter)
+
+#case 7 - bitwise & | ^ ~ << >>
+#-----------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
