@@ -247,40 +247,111 @@ print('a' in letter)
 #-----------------------------------------------------------------------
 
 
+#list
 
+#case 1
+list = ["a","b","c"]
+print(list)
+print(len(list)) # list length
+list = ["a",1,True] # can hold different data types
+print(list)
+print(type(list)) # <class 'list'> type
+# list = list(("a","b","c"))
+# print(list)
+print(list[0])
+print(list[-1]) # -1 is the last element in the list
+print(list[1:2]) # 1 is inclusive and 2 is exclusive
+print(list[:2]) # exclusive of 2
+print(list[1:]) # inclusive of 1
+print(list[-3:-1]) # -1 is exclusive. [-1/-2/-3:0] will give []
+print(1.0 in list) # True
+list[1] = 0 # replace an item
+print(list)
+list[1:3] = [1,False] # replace range
+print(list)
+list[1:2] = [0,True] # replace range case 1
+print(list)
+list[2:4] = [1] # replace range case 2
+print(list)
+list.insert(3,True) # insert item without replace. any val> 3 will be accepted
+print(list)
+list.append(False) # insert at end of the list
+print(list)
+list.extend(["b","c"]) # extend list
+list.extend(("b","d")) # extend tuple
+print(list)
+list.remove("b") # removes first occurance
+print(list)
+list.pop(6) # removes the index
+print(list)
+list.pop() # removes the last item
+print(list)
+del list[5] # removes the 5th item
+print(list)
+list.clear() # empties the list
+print(list)
+del list  # deleted the list from memory
 
+list = ["x","y","z"]
+for e in list: # for loop
+	print(e)
+for i in range(len(list)): # indexed for
+	print(list[i])
+i = 0
+while i < len(list): # while loop
+	print(list[i])
+	i+=1
+[print(e) for e in list] # comprehension
+newlist = [e for e in list if True]
+print(newlist)
+newlist = [e for e in range(10) if e<=5]
+print(newlist)
+newlist = [e.upper() for e in list]
+print(newlist)
+newlist = [e if e!="z" else "zz" for e in list]
+print(newlist)
 
+list = ["b","d","a","c"]
+list.sort() # ascending sort
+print(list)
+list = [5,2,3,1,4]
+list.sort() # ascending sort
+print(list)
+list = [5,2,3,1,4]
+list.sort(reverse = True) # descending sort
+print(list)
+list = [2,3,4,6,7,8]
+def sortfunc(n):
+	return abs(n-5)
+list.sort(key = sortfunc) # custom sort
+print(list)
+list = ["b","B","D","d","a","A","C","c"]
+list.sort(key = str.lower) # case insensitive sort
+print(list)
+list = ["b","d","a","c"]
+list.reverse() # reverse order
+print(list)
 
+list = ["a","b","c"]
+copylist = list.copy()
+print(copylist)
+# copylist = list(list)
+# print(copylist)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+alist = [1,2,3]
+blist = ["a","b","c"]
+list = alist + blist # join list
+print(list)
+alist = [1,2,3]
+blist = ["a","b","c"]
+for l in blist:
+	alist.append(l) # join using for
+print(alist)
+alist = [1,2,3]
+blist = ["a","b","c"]
+alist.extend(blist) # join using extend
+print(alist)
+#-----------------------------------------------------------------------
 
 
 
