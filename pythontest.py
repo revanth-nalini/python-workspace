@@ -249,7 +249,6 @@ print('a' in letter)
 
 #list
 
-#case 1
 list = ["a","b","c"]
 print(list)
 print(len(list)) # list length
@@ -354,15 +353,70 @@ print(alist)
 #-----------------------------------------------------------------------
 
 
+#tuple
+
+tuple = ("a","b","c")
+print(tuple)
+print(len(tuple)) # list length
+tuple=("a",) # for single item comma has to be added at the end
+print(tuple)
+print(type(tuple)) # <class 'tuple'>
+tuple = ("a",1,True) # can hold different data types
+print(tuple)
+# tuple = tuple(("a",1,True))
+print(tuple[0])
+print(tuple[-1]) # -1 is the last element in the list
+print(tuple[0:3]) # 0 is inclusive and 3 is exclusive
+print(tuple[:2]) # exclusive of 2
+print(tuple[1:]) # inclusive of 1
+print(tuple[-3:-1]) # -1 is exclusive. [-1/-2/-3:0] will give []
+print(1 in tuple)
+
+# tuple = ("x","b","c")
+# listcopy = list(tuple)
+# listcopy[0] = "a" # modify item in tuple
+# tuple = tuple(listcopy)
+# print(tuple)
+
+# tuple = ("x","b","c")
+# listcopy = list(tuple)
+# listcopy.append("d") # append item to tuple
+# tuple = tuple(listcopy)
+# print(tuple)
 
 
+tuplea = ("a","b")
+tupleb = ("c",)
+tuplea+=tupleb # append item to tuple
+print(tuplea)
 
+# tuple = ("a","b","c","d")
+# listcopy = list(tuple)
+# listcopy.remove("d") # remove item in tuple
+# tuple = tuple(listcopy)
+# print(tuple)
 
+del tuple # delete a tuple
 
+tuple = ("a",1)
+x,y = tuple # unpacking tuple
+print(x)
+print(y)
 
+tuple = ("a","b","c")
+for x in tuple: # for loop
+	print(x)
+for i in range(len(tuple)): # indexed for
+	print(tuple[i])
+i=0
+while i < len(tuple): # while loop
+	print(tuple[i])
+	i+=1
 
-
-
+tuple = ("a","b","c")
+tuple = 2*tuple
+print(tuple)
+#-----------------------------------------------------------------------
 
 
 
