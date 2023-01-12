@@ -419,6 +419,109 @@ print(tuple)
 #-----------------------------------------------------------------------
 
 
+#set
+
+set = {"a","b","c"}
+print(set)
+set = {"a","b","c","a"} # no duplicates allowed {a,b,c}
+print(set)
+print(len(set)) # length of set
+set = {"a",1,True} # can hold different data types + True is considered as 1
+print(set)
+print(type(set)) # <class 'set'>
+# set = set(("a","b","c"))
+
+for e in set: # for loop
+	print(e) 
+print(True in set) 
+
+set.add(False) # add item to set
+print(set)
+addset = {"b","c"}
+set.update(addset) # add set to existing set
+print(set)
+addlist = [2,3]
+addtuple = (4,5)
+set.update(addlist) # add list to set
+set.update(addtuple) # add tuple to set
+print(set)
+
+set.remove(4) # removes item from set - will raise error if item not present
+set.discard(5) # removes item from set - does not raise error if item not present
+print(set)
+print(set.pop()) # randomly removes element
+set.clear() # empties set
+print(set)
+# del set # deletes set
+
+seta = {"a","b","c"}
+setb = {1,2,3}
+setc = seta.union(setb) # adds two sets and creates a new set
+print(setc)
+#-----------------------------------------------------------------------
+
+
+#dictionary
+dict = {"a":0,"b":1,"c":2}
+print(dict)
+print(dict["a"]) # access value associated with a key
+dict = {"a":0,"b":1,"c":2,"a":3} # duplicate values overwrite existing value
+print(dict)
+print(len(dict)) # length of dictionary
+dict = {"a":"a",1:1,False:["a"]} # can hold different data types + False is considered as 0
+print(dict)
+print(type(dict)) # <class 'dict'>
+# dict = dict("a"="a","b"="b","c"="c")
+# print(dict)
+
+print(dict.get(False)) # access value associated with a key
+print(dict.keys()) # returns list of all keys
+dict[1.0] = True # change value of an item
+print(dict)
+dict.update({0:0}) # change value of an item if key exists or adds item to the dict
+print(dict)
+dict[0.01] = 0.01 # adds item to dict
+print(dict)
+
+dict.pop("a") # removes specified key from dict
+print(dict)
+dict.popitem() # removes last inserted item from dict
+print(dict)
+del dict[1] # delted specified key from dict
+print(dict)
+dict.clear() # empties dict
+print(dict)
+# del dict # deletes dict
+
+dict = {"a":"a",1:1,False:["a"]}
+for e in dict: # for loop
+    print(e, dict[e])
+for e in dict.keys(): # loop only keys
+    print(e)
+for e in dict.values(): # loop only values
+    print(e)
+for k,v in dict.items(): # loop all items
+    print(k,v)
+
+dictcopy = dict.copy()
+print(dictcopy)
+# dictcopy = dict(dict)
+# print(dict)
+
+dict = {
+    "dict1" : {"name" : "a", "val" : 0},
+    "dict2" : {"name" : "b", "val" : 1}
+    }
+print(dict) # nested dict
+
+dict3 = {"name" : "c", "val" : 2}
+dict4 = {"name" : "d", "val" : 3}
+dict = {"dict3" : dict3, "dict4" : dict4}
+print(dict) # nested dict
+
+
+
+
 
 
 
